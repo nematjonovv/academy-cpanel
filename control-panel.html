@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Academy(Control Panel)</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- 📚 Kurslar bo‘limi -->
+        <div class="admin-section">
+            <h2>📚 Mavjud kurslar</h2>
+            <ul id="coursesList">
+                <li>⏳ Yuklanmoqda...</li>
+            </ul>
+
+            <h2>🛠 Kurs qo‘shish</h2>
+
+            <label for="categorySelect">Kategoriyani tanlang:</label>
+            <select id="categorySelect">
+                <option value="children">Дети (8 — 14 лет)</option>
+                <option value="teenager">Подростки (14 — 18 лет)</option>
+                <option value="adults">Взрослые (18+)</option>
+            </select>
+
+            <label for="courseName">Kurs nomi:</label>
+            <input type="text" id="courseName" placeholder="Masalan, Web Dasturlash">
+
+            <label for="courseDesc">Kurs tavsifi:</label>
+            <textarea id="courseDesc" placeholder="Qisqacha kurs haqida..."></textarea>
+
+            <label for="courseContinues">Darslar soni:</label>
+            <input type="number" id="courseContinues" placeholder="Masalan, 10">
+
+            <label for="coursePrice">Narxi ($):</label>
+            <input type="number" id="coursePrice" placeholder="Masalan, 100">
+
+            <button onclick="addCourse()">📩 Kurs qo‘shish</button>
+        </div>
+
+        <!-- 📞 Kontaktlar bo‘limi -->
+        <div class="admin-section">
+            <h2>📞 O‘quv Markazining Kontaktlari</h2>
+
+            <form id="contact-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="phone">Telefon:</label>
+                <input type="tel" id="phone" required>
+
+                <label for="phone">Manzil:</label>
+                <input type="text" id="address" required>
+
+                <button type="submit">📩 Yangilash</button>
+            </form>
+
+            <p id="status-message"></p>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
