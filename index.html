@@ -9,57 +9,58 @@
 <body>
 
     <div class="container">
-        <!-- 📚 Kurslar bo‘limi -->
+        <!-- 📚 Раздел курсов -->
         <div class="admin-section">
-            <h2>📚 Mavjud kurslar</h2>
+            <h2>📚 Доступные курсы</h2>
             <ul id="coursesList">
-                <li>⏳ Yuklanmoqda...</li>
+                <li>⏳ Загрузка...</li>
             </ul>
 
-            <h2>🛠 Kurs qo‘shish</h2>
+            <h2>🛠 Добавить курс</h2>
 
-            <label for="categorySelect">Kategoriyani tanlang:</label>
+            <label for="categorySelect">Выберите категорию:</label>
             <select id="categorySelect">
                 <option value="children">Дети (8 — 14 лет)</option>
                 <option value="teenager">Подростки (14 — 18 лет)</option>
                 <option value="adults">Взрослые (18+)</option>
             </select>
 
-            <label for="courseName">Kurs nomi:</label>
-            <input type="text" id="courseName" placeholder="Masalan, Web Dasturlash">
+            <label for="courseName">Название курса:</label>
+            <input type="text" id="courseName" placeholder="Например, WEB-программирование">
 
-            <label for="courseDesc">Kurs tavsifi:</label>
-            <textarea id="courseDesc" placeholder="Qisqacha kurs haqida..."></textarea>
+            <label for="courseDesc">Описание курса:</label>
+            <textarea id="courseDesc" placeholder="Кратко о курсе..."></textarea>
 
-            <label for="courseContinues">Darslar soni:</label>
-            <input type="number" id="courseContinues" placeholder="Masalan, 10">
+            <label for="courseContinues">Количество уроков:</label>
+            <input type="number" id="courseContinues" placeholder="Например, 10">
 
-            <label for="coursePrice">Narxi ($):</label>
-            <input type="number" id="coursePrice" placeholder="Masalan, 100">
+            <label for="coursePrice">Цена ($):</label>
+            <input type="number" id="coursePrice" placeholder="Например, 100">
 
-            <button onclick="addCourse()">📩 Kurs qo‘shish</button>
+            <button onclick="addCourse()">📩 Добавить курс</button>
         </div>
 
-        <!-- 📞 Kontaktlar bo‘limi -->
+        <!-- 📞 Раздел контактов -->
         <div class="admin-section">
-            <h2>📞 O‘quv Markazining Kontaktlari</h2>
+            <h2>📞 Контакты учебного центра</h2>
 
             <form id="contact-form">
                 <label for="email">Email:</label>
                 <input type="email" id="email" required>
 
-                <label for="phone">Telefon:</label>
+                <label for="phone">Телефон:</label>
                 <input type="tel" id="phone" required>
 
-                <label for="phone">Manzil:</label>
+                <label for="address">Адрес:</label>
                 <input type="text" id="address" required>
 
-                <button type="submit">📩 Yangilash</button>
+                <button type="submit">📩 Обновить</button>
             </form>
 
             <p id="status-message"></p>
         </div>
     </div>
+
 
     <script src="js/admin.js"></script>
 </body>

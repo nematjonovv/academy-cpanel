@@ -76,7 +76,7 @@ document.getElementById("contact-form").addEventListener("submit", async (event)
         body: JSON.stringify(updatedData)
     });
 
-    document.getElementById("status-message").textContent = "Kontaktlar muvaffaqiyatli yangilandi!";
+    document.getElementById("status-message").textContent = "Контакты успешно обновлены!";
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -87,20 +87,20 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch("http://127.0.0.1:8000/contacts")
       .then((response) => {
         if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
+          throw new Error(`Ошибка HTTP! Статус: ${response.status}`);
         }
         return response.json();
       })
       .then((data) => {
-        console.log("Serverdan kelgan ma'lumot:", data);
+        console.log("Данные с сервера:", data);
         phoneNumber.textContent = data.contact_info.phone;
         email.textContent = data.contact_info.email;
         address.textContent = data.contact_info.address;
       })
       .catch((error) => {
-        console.error("Xatolik:", error);
-        phoneNumber.textContent = "Xatolik!";
-        email.textContent = "Xatolik!";
-        address.textContent = "Xatolik!";
+        console.error("Ошибка:", error);
+        phoneNumber.textContent = "Ошибка!";
+        email.textContent = "Ошибка!";
+        address.textContent = "Ошибка!";
       });
-  });
+});
